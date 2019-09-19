@@ -1,4 +1,5 @@
 ###GitとGithubの入門まとめ
+
 [【GitHub超初心者入門】この前初めてGitHubを使い始めたエンジニア見習いが書くGitHubの使い方と実践～とりあえず一緒に動かしてみようぜ！～]
 (https://qiita.com/nnahito/items/565f8755e70c51532459)
 
@@ -11,6 +12,7 @@ Githubだけでは使えない
 
 
 ###VS codeとGit,Github
+
 [VSCodeの機能で最低限必要なGit操作をしたい！]
 (https://qiita.com/mnao305/items/b3c5f5943066a0bb8e2e)
 
