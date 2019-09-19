@@ -6,6 +6,9 @@
 [Git超絶まとめ]
 (https://qiita.com/masashi127/items/2e103c3fba9d1b058961)
 
+[GitとGithub用語]
+(https://togetter.com/li/1392604)
+
 GitとGithubにリポジトリを作る
 Git←→Githubでやりとりをする
 Githubだけでは使えない
