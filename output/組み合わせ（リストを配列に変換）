@@ -1,0 +1,46 @@
+package kumiawase;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Combination {
+
+    public static void main(String[] args) {
+
+		//リストを定義
+		List<String> name = new ArrayList<>();
+
+		//名前をリストに追加
+		name.add("大久保");
+		name.add("平嶋");
+		name.add("岩本");
+		name.add("堤");
+		name.add("石井");
+
+		//リストをシャッフル
+		Collections.shuffle(name);
+
+		//リストを配列に変換
+		String[] list = new String[name.size()];
+		name.toArray(list);
+
+    	//nCombination関数で全組み合わせを取得
+    	nCombination(list);
+
+    }
+
+    private static void nCombination(String[] list) {
+
+    	int count = list.length;
+        int num = 0;
+
+        for (int i = 0; i < count - 1; i++) {
+            for (int j = i + 1; j < count; j++) {
+                num++;
+                System.out.print(num + " {" + list[i] + ", " + list[j] + "}\t");
+            }
+            System.out.println();
+        }
+    }
+}
