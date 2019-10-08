@@ -1,0 +1,27 @@
+package kumiawase;
+
+public class Combination {
+
+    public static void main(String[] args) {
+
+    	//配列を定義
+    	String[] list = { "大久保", "平嶋", "石井", "岩本", "堤"};
+    	//nCombination関数で全組み合わせを取得
+    	nCombination(list);
+
+    }
+
+    private static void nCombination(String[] list) {
+
+    	int count = list.length;
+        int num = 0;
+
+        for (int i = 0; i < count - 1; i++) {
+            for (int j = i + 1; j < count; j++) {
+                num++;
+                System.out.print(num + " {" + list[i] + ", " + list[j] + "}\t");
+            }
+            System.out.println();
+        }
+    }
+}
