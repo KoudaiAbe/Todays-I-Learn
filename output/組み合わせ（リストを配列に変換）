@@ -1,6 +1,6 @@
 package kumiawase;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -9,14 +9,7 @@ public class Combination {
     public static void main(String[] args) {
 
 		//リストを定義
-		List<String> name = new ArrayList<>();
-
-		//名前をリストに追加
-		name.add("大久保");
-		name.add("平嶋");
-		name.add("岩本");
-		name.add("堤");
-		name.add("石井");
+		List<String> name = Arrays.asList("大久保","平嶋","石井","岩本","堤");
 
 		//リストをシャッフル
 		Collections.shuffle(name);
@@ -39,8 +32,16 @@ public class Combination {
             for (int j = i + 1; j < count; j++) {
                 num++;
                 System.out.print(num + " {" + list[i] + ", " + list[j] + "}\t");
+
+                //ゆっくり出力
+                try{
+                	Thread.sleep(1000);
+                }catch(InterruptedException e){
+                	e.printStackTrace();
+                }
             }
-            System.out.println();
+        //改行用
+        System.out.println();
         }
     }
 }
