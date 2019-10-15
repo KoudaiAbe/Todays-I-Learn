@@ -21,14 +21,14 @@ public class FruitServlet extends HttpServlet {
 			HttpServletResponse response)
 					throws ServletException, IOException {
 
-		//create Fruit instance
+		//フルーツインスタンスを作成
 		Fruit f = new Fruit("いちご",700);
 
-		//applicationscope
+		//アプリケーションスコープ
 		ServletContext application = this.getServletContext();
 		application.setAttribute("fruit", f);
 
-		//Forward
+		//フォワード
 		RequestDispatcher dispathcher =
 				request.getRequestDispatcher("/WEB-INF/ex/fruit.jsp");
 		dispathcher.forward(request, response);
