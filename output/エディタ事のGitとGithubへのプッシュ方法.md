@@ -30,3 +30,10 @@ Githubだけでは使えない
 
 [GitHubとEclipseの連携とかまとめ]
 (https://qiita.com/komikcomik/items/207794a332aa581c22d4)
+
+###***チーム開発とGit,Github***
+[git初学者の初めてのチーム開発で気をつける事の備忘録]
+(https://qiita.com/shh-nkmr/items/fde133cbdfa5f0092be1)
+
+[チーム開発 GitHubの使い方]
+(https://qiita.com/syougun360/items/013229aeddec08121474)
