@@ -1,0 +1,14 @@
+テーブル名の変更
+ALTER table テーブル名 rename to 新テーブル名;
+
+テーブルの定義確認
+SHOW full columns from テーブル名;
+
+テーブルの定義変更
+ALTER tableb テーブル名 change 変更したい列　変更したい列と新定義;
+
+NOT NULL制約を外す
+ALTER table テーブル名 change 変更したい列名 変更したい列名と型 null;
+
+NOT NULL制約を外さずに定義を変更
+ALTER table テーブル名 MODIFY 列名 型 NOT NULL
