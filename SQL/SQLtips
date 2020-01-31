@@ -12,3 +12,15 @@ ALTER table テーブル名 change 変更したい列名 変更したい列名�
 
 NOT NULL制約を外さずに定義を変更
 ALTER table テーブル名 MODIFY 列名 型 NOT NULL
+
+評価順序
+1.from
+2.on
+3.join
+4.where
+5.group by
+6.having
+7.select
+8.distinct
+9.order by
+10.top/limit
