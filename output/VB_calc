@@ -1,0 +1,326 @@
+Public Class Form1
+
+    '----------<< 変数宣言 >>----------
+    ' 押されたボタンの数字以外の値（+-*/,=,C）を保存する変数
+    Private ope As String = Nothing
+
+    ' 押されたボタンの値（1~9,+-*/,=,C）を保存する変数
+    Private beforeIn As String = "C"
+
+    ' 演算結果を保存する変数
+    Private ans As Long = 0
+
+    '   入力された数値を保存する変数
+    Private num As Long = 0
+
+    ' 数字１ボタンクリック処理
+    Private Sub BtnOne_Click(sender As Object, e As EventArgs) Handles BtnOne.Click
+
+        If beforeIn >= "0" And beforeIn <= "9" Then
+            ' 直前の押されたのが数字ボタンのとき
+            ' かつ、8桁未満の数値が入力されているとき
+            If LblAnser.Text.Length < 8 Then
+                LblAnser.Text &= "1"
+            End If
+        Else
+            ' 直前の押されたのが数字以外のボタンのとき
+            LblAnser.Text = "1"
+        End If
+        beforeIn = "1"
+
+    End Sub
+
+    ' 数字2ボタンクリック処理
+    Private Sub BtnTwo_Click(sender As Object, e As EventArgs) Handles BtnTwo.Click
+
+        If beforeIn >= "0" And beforeIn <= "9" Then
+            If LblAnser.Text.Length < 8 Then
+                LblAnser.Text &= "2"
+            End If
+        Else
+            ' 直前の押されたのが数字以外のボタンのとき
+            LblAnser.Text = "2"
+        End If
+        beforeIn = "2"
+
+    End Sub
+
+    ' 数字3ボタンクリック処理
+    Private Sub BtnThree_Click(sender As Object, e As EventArgs) Handles BtnThree.Click
+
+        If beforeIn >= "0" And beforeIn <= "9" Then
+            If LblAnser.Text.Length < 8 Then
+                LblAnser.Text &= "3"
+            End If
+        Else
+            ' 直前の押されたのが数字以外のボタンのとき
+            LblAnser.Text = "3"
+        End If
+        beforeIn = "3"
+
+    End Sub
+
+    ' 数字4ボタンクリック処理
+    Private Sub BtnFour_Click(sender As Object, e As EventArgs) Handles BtnFour.Click
+
+        If beforeIn >= "0" And beforeIn <= "9" Then
+            If LblAnser.Text.Length < 8 Then
+                LblAnser.Text &= "4"
+            End If
+        Else
+            ' 直前の押されたのが数字以外のボタンのとき
+            LblAnser.Text = "4"
+        End If
+        beforeIn = "4"
+
+    End Sub
+
+    ' 数字5ボタンクリック処理
+    Private Sub BtnFive_Click(sender As Object, e As EventArgs) Handles BtnFive.Click
+
+        If beforeIn >= "0" And beforeIn <= "9" Then
+            If LblAnser.Text.Length < 8 Then
+                LblAnser.Text &= "5"
+            End If
+        Else
+            ' 直前の押されたのが数字以外のボタンのとき
+            LblAnser.Text = "5"
+        End If
+        beforeIn = "5"
+
+    End Sub
+
+    ' 数字6ボタンクリック処理
+    Private Sub BtnSix_Click(sender As Object, e As EventArgs) Handles BtnSix.Click
+
+        If beforeIn >= "0" And beforeIn <= "9" Then
+            If LblAnser.Text.Length < 8 Then
+                LblAnser.Text &= "6"
+            End If
+        Else
+            ' 直前の押されたのが数字以外のボタンのとき
+            LblAnser.Text = "6"
+        End If
+        beforeIn = "6"
+
+    End Sub
+
+    ' 数字7ボタンクリック処理
+    Private Sub BtnSeven_Click(sender As Object, e As EventArgs) Handles BtnSeven.Click
+
+        If beforeIn >= "0" And beforeIn <= "9" Then
+            If LblAnser.Text.Length < 8 Then
+                LblAnser.Text &= "7"
+            End If
+        Else
+            ' 直前の押されたのが数字以外のボタンのとき
+            LblAnser.Text = "7"
+        End If
+        beforeIn = "7"
+
+    End Sub
+
+    ' 数字8ボタンクリック処理
+    Private Sub BtnEight_Click(sender As Object, e As EventArgs) Handles BtnEight.Click
+
+        If beforeIn >= "0" And beforeIn <= "9" Then
+            If LblAnser.Text.Length < 8 Then
+                LblAnser.Text &= "8"
+            End If
+        Else
+            ' 直前の押されたのが数字以外のボタンのとき
+            LblAnser.Text = "8"
+        End If
+        beforeIn = "8"
+
+    End Sub
+
+    ' 数字9ボタンクリック処理
+    Private Sub BtnNine_Click(sender As Object, e As EventArgs) Handles BtnNine.Click
+
+        If beforeIn >= "0" And beforeIn <= "9" Then
+            If LblAnser.Text.Length < 8 Then
+                LblAnser.Text &= "9"
+            End If
+        Else
+            ' 直前の押されたのが数字以外のボタンのとき
+            LblAnser.Text = "9"
+        End If
+        beforeIn = "9"
+
+    End Sub
+
+    ' 数字0ボタンクリック処理
+    Private Sub BtnZero_Click(sender As Object, e As EventArgs) Handles BtnZero.Click
+
+        If beforeIn >= "0" And beforeIn <= "9" Then
+            If LblAnser.Text.Length < 8 Then
+                LblAnser.Text &= "0"
+            End If
+        Else
+            ' 直前の押されたのが数字以外のボタンのとき
+            LblAnser.Text = "0"
+        End If
+        beforeIn = "0"
+
+    End Sub
+
+    ' ＋ボタンクリック処理
+    Private Sub BtnPlus_Click(sender As Object, e As EventArgs) Handles BtnPlus.Click
+
+        If beforeIn >= "0" And beforeIn <= "9" Then
+            If ope = "C" Then
+                ' 最初の入力数値をansに保管
+                ans = CInt(LblAnser.Text)
+            Else
+                ' ansに保管されている＋ボタンクリック前の数値と計算
+                num = CInt(LblAnser.Text)
+                ans += num
+                LblAnser.Text = ans
+            End If
+        Else
+            ' 前回クリックが数字以外の時
+            Select Case ope
+                Case "C"
+                    ' 前回がクリアボタン
+                    ans = CInt(LblAnser.Text)
+                Case "="
+                    ' 前回がイコールボタン
+                    ans += num
+                Case "+"
+                    num = ans
+            End Select
+        End If
+        beforeIn = "+"
+        ope = "+"
+
+    End Sub
+
+    ' -ボタンクリック処理
+    Private Sub BtnMinus_Click(sender As Object, e As EventArgs) Handles BtnMinus.Click
+
+        If beforeIn >= "0" And beforeIn <= "9" Then
+            If ope = "C" Then
+                ' 最初の入力数値をansに保管
+                ans = CInt(LblAnser.Text)
+            Else
+                ' ansに保管されている-ボタンクリック前の数値と計算
+                num = CInt(LblAnser.Text)
+                ans -= num
+                LblAnser.Text = ans
+            End If
+        Else
+            ' 前回クリックが数字以外の時
+            Select Case ope
+                Case "C"
+                    ' 前回がクリアボタン
+                    ans = CInt(LblAnser.Text)
+                Case "="
+                    ' 前回がイコールボタン
+                    ans -= num
+                Case "-"
+                    num = ans
+            End Select
+        End If
+        beforeIn = "-"
+        ope = "-"
+
+    End Sub
+
+    ' *ボタンクリック処理
+    Private Sub BtnKake_Click(sender As Object, e As EventArgs) Handles BtnKake.Click
+
+        If beforeIn >= "0" And beforeIn <= "9" Then
+            If ope = "C" Then
+                ' 最初の入力数値をansに保管
+                ans = CInt(LblAnser.Text)
+            Else
+                ' ansに保管されている*ボタンクリック前の数値と計算
+                num = CInt(LblAnser.Text)
+                ans *= num
+                LblAnser.Text = ans
+            End If
+        Else
+            ' 前回クリックが数字以外の時
+            Select Case ope
+                Case "C"
+                    ' 前回がクリアボタン
+                    ans = CInt(LblAnser.Text)
+                Case "="
+                    ' 前回がイコールボタン
+                    ans *= num
+                Case "*"
+                    num = ans
+            End Select
+        End If
+        beforeIn = "*"
+        ope = "*"
+
+    End Sub
+
+    ' /ボタンクリック処理
+    Private Sub BtnWaru_Click(sender As Object, e As EventArgs) Handles BtnWaru.Click
+
+        If beforeIn >= "0" And beforeIn <= "9" Then
+            If ope = "C" Then
+                ' 最初の入力数値をansに保管
+                ans = CInt(LblAnser.Text)
+            Else
+                ' ansに保管されている/ボタンクリック前の数値と計算
+                num = CInt(LblAnser.Text)
+                ans /= num
+                LblAnser.Text = ans
+            End If
+        Else
+            ' 前回クリックが数字以外の時
+            Select Case ope
+                Case "C"
+                    ' 前回がクリアボタン
+                    ans = CInt(LblAnser.Text)
+                Case "="
+                    ' 前回がイコールボタン
+                    ans /= num
+                Case "/"
+                    num = ans
+            End Select
+        End If
+        beforeIn = "/"
+        ope = "/"
+
+    End Sub
+
+    ' ＝ボタンクリック処理
+    Private Sub BtnEqual_Click(sender As Object, e As EventArgs) Handles BtnEqual.Click
+
+        If beforeIn >= "0" And beforeIn <= "9" Then
+            num = CInt(LblAnser.Text)
+        End If
+        ' 演算子を判定して処理を振分
+        Select Case ope
+            Case "+"
+                ans += num
+            Case "-"
+                ans -= num
+            Case "*"
+                ans *= num
+            Case "/"
+                ans /= num
+        End Select
+
+        LblAnser.Text = ans
+        beforeIn = "C"
+
+    End Sub
+
+    ' Ｃボタンクリック処理
+    Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click
+
+        ans = 0
+        num = 0
+        beforeIn = "C"
+        ope = "C"
+        LblAnser.Text = "0"
+
+    End Sub
+
+End Class
