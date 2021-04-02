@@ -1,0 +1,13 @@
+VisualBasicの文字列比較
+数字をString型で比較する時、左側の桁から比較をしていく
+
+ "1" >= "2" #False(1 >= 2)
+ "10" >= "2" #False(1 >= 2)　
+ "20 ">= "2" #True(2 >= 2)
+ "73" < "9" #True(7 < 9)
+ "12345" = "12345" #True ("1" = "1" True → "2" = "2" True…"5" = "5" True）
+
+参考
+https://docs.microsoft.com/ja-jp/dotnet/visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators
+
+そもそも、数字はInteger型で比較をするべきだから、変数に格納する時は型に注意する必要がある。
