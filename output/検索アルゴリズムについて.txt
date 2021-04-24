@@ -1,0 +1,11 @@
+
+
+##goole 検索アルゴリズムの仕組み
+https://www.google.com/intl/ja/search/howsearchworks/algorithms/
+
+
+##検索エンジンの作り方
+https://spjai.com/search-engine/
+
+
+
