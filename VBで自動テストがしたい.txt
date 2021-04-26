@@ -1,0 +1,19 @@
+
+
+テストめんどくさすぎる。。。自動テスト導入してみたい。
+
+
+##意識が高くないVisualStudioを使用した単体テストの自動化
+https://qiita.com/mima_ita/items/05ce44c3eb1fd6e9dd46
+
+
+##Visual Studioを使って単体テストの自動化を行う方法
+https://www.fenet.jp/dotnet/column/tool/2562/
+
+
+
+##.NET でのテスト
+https://docs.microsoft.com/ja-jp/dotnet/core/testing/
+
+
+
