@@ -24,8 +24,6 @@ https://www.atmarkit.co.jp/fdotnet/chushin/introwinform_08/introwinform_08_01.ht
 ##Visual Studio 2017で単体テストもしくはTDDする
 https://takap-tech.com/entry/2017/11/10/021842
 
-
-
 ##テスト自動化について
 https://qiita.com/yutachaos/items/857472c7d3c65d3cf316
 
